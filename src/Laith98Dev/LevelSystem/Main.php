@@ -76,7 +76,7 @@ class Main extends PluginBase
 	];
 	
 	/** @var Plugin|null */
-	public $pureChat;
+	public $rankSystem;
 	
 	public function onEnable(): void{
 		self::$instance = $this;
@@ -93,7 +93,7 @@ class Main extends PluginBase
 		
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 		
-		$this->pureChat = $this->getServer()->getPluginManager()->getPlugin("PureChat");
+		$this->rankSystem = $this->getServer()->getPluginManager()->getPlugin("RankSystem");
 	}
 	
 	public function getDataManager(){
